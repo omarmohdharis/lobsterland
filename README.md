@@ -2,7 +2,7 @@
 
 A static GitHub Pages site showcasing our AD654 Marketing Analytics consulting project for Lobster Land's "Stay & Play" lodging initiative.
 
-**Live site:** _add your GitHub Pages URL here once deployed_
+**Live site:** https://omarmohdharis.github.io/lobsterland/
 
 ## What's inside
 
