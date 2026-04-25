@@ -271,15 +271,57 @@
       </div>
 
       <div class="photo-grid">
-        <div class="photo-card"><div class="photo-emoji">🌃</div><h4>Night Glow</h4><p>Resort exterior, golden hour</p></div>
+        <div class="photo-card winner-photo">
+          <div class="winner-tag">Winner</div>
+          <div class="photo-emoji">🌅</div>
+          <h4>Ocean Lodging</h4>
+          <p>Couple, ocean view from room</p>
+        </div>
         <div class="photo-card"><div class="photo-emoji">🏖️</div><h4>Boardwalk Fun</h4><p>Daytime crowd, balconies</p></div>
-        <div class="photo-card"><div class="photo-emoji">🌅</div><h4>Ocean Lodging</h4><p>Couple, ocean view from room</p></div>
         <div class="photo-card"><div class="photo-emoji">⛱️</div><h4>Beach Side</h4><p>Lounge chairs, family beach</p></div>
+        <div class="photo-card"><div class="photo-emoji">🌃</div><h4>Night Glow</h4><p>Resort exterior, golden hour</p></div>
+      </div>
+
+      <div class="conversion-card">
+        <h3>Average Conversion Rate by Image</h3>
+        <div class="conv-rows">
+          <div class="conv-row" data-pct="100" data-rate="1.03">
+            <div class="conv-label">🌅 Ocean Lodging</div>
+            <div class="conv-track"><div class="conv-bar bar-winner"></div></div>
+            <div class="conv-value">1.03%</div>
+          </div>
+          <div class="conv-row" data-pct="71.8" data-rate="0.74">
+            <div class="conv-label">🏖️ Boardwalk Fun</div>
+            <div class="conv-track"><div class="conv-bar"></div></div>
+            <div class="conv-value">0.74%</div>
+          </div>
+          <div class="conv-row" data-pct="45.6" data-rate="0.47">
+            <div class="conv-label">⛱️ Beach Side</div>
+            <div class="conv-track"><div class="conv-bar"></div></div>
+            <div class="conv-value">0.47%</div>
+          </div>
+          <div class="conv-row" data-pct="37.9" data-rate="0.39">
+            <div class="conv-label">🌃 Night Glow</div>
+            <div class="conv-track"><div class="conv-bar"></div></div>
+            <div class="conv-value">0.39%</div>
+          </div>
+        </div>
+
+        <div class="anova-box">
+          <div class="anova-icon">📊</div>
+          <div>
+            <strong>ANOVA Test</strong>
+            <p>p-value &gt; 0.05 — no statistically significant difference across images.</p>
+          </div>
+        </div>
       </div>
 
       <div class="callout">
-        Full statistical test results, p-values, and the recommendation are in the project notebook.
-        The winning image becomes the anchor of any future "Stay &amp; Play" campaign launch.
+        <strong>Recommendation: go with Ocean Lodging.</strong> ANOVA didn't surface a statistically
+        significant difference, but Ocean Lodging still posted the highest average conversion at 1.03%
+        — more than 2.5× Night Glow. Even a small lift compounds at scale, so picking the
+        best-performing creative is still the right business call. More data could confirm whether the
+        edge holds up over time.
       </div>
     </div>
   </section>

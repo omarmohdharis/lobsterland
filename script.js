@@ -61,7 +61,7 @@ const animateCounter = (el) => {
 
 // ----- Intersection observer for reveals + counters -----
 const revealEls = document.querySelectorAll(
-  '.section-head, .cluster-card, .stat, .package-card, .model-card, .features-list, .photo-card, .team-card, .callout, .overview-text'
+  '.section-head, .cluster-card, .stat, .package-card, .model-card, .features-list, .photo-card, .team-card, .callout, .overview-text, .conversion-card'
 );
 revealEls.forEach(el => el.classList.add('reveal'));
 
@@ -80,6 +80,20 @@ const observer = new IntersectionObserver((entries) => {
           animateCounter(num);
         }
       }
+
+      // trigger conversion bars
+      if (entry.target.classList.contains('conversion-card')) {
+        const rows = entry.target.querySelectorAll('.conv-row');
+        rows.forEach((row, i) => {
+          const pct = row.dataset.pct;
+          const bar = row.querySelector('.conv-bar');
+          if (bar && !bar.dataset.animated) {
+            bar.dataset.animated = 'true';
+            setTimeout(() => { bar.style.width = pct + '%'; }, 200 + i * 150);
+          }
+        });
+      }
+
       observer.unobserve(entry.target);
     }
   });
