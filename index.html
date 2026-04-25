@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lobster Land · Stay &amp; Play Initiative</title>
+  <meta name="description" content="An analytical consulting project exploring Lobster Land's expansion into on-site lodging — segmentation, conjoint analysis, classification, and more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%A6%9E%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <span class="brand-icon">🦞</span>
+        <span class="brand-text">Lobster Land</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#segmentation">Segments</a></li>
+        <li><a href="#conjoint">Package</a></li>
+        <li><a href="#classification">Model</a></li>
+        <li><a href="#abtest">A/B Test</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+    <div id="scroll-progress"></div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header id="top" class="hero">
+    <div class="hero-bg">
+      <div class="wave wave1"></div>
+      <div class="wave wave2"></div>
+      <div class="wave wave3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-tag">AD654 · Marketing Analytics · Spring 2026</div>
+      <h1>
+        <span class="hero-line1">Stay <span class="amp">&amp;</span> Play</span>
+        <span class="hero-line2">at Lobster Land 🦞</span>
+      </h1>
+      <p class="hero-sub">
+        A data-driven blueprint for Lobster Land's expansion into on-site lodging —
+        from guest segmentation and conjoint design to classification of premium-package buyers.
+      </p>
+      <div class="hero-cta">
+        <a href="#overview" class="btn btn-primary">Dive In</a>
+        <a href="#team" class="btn btn-ghost">Meet the Team</a>
+      </div>
+      <div class="scroll-hint">
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ OVERVIEW ============ -->
+  <section id="overview" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The Brief</span>
+        <h2>From day-trippers to overnight guests</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-text">
+          <p class="lede">
+            Lobster Land's gates have been busy — but most guests come, ride, eat, and leave.
+            Management wants to know: <em>could a hotel keep them around?</em>
+          </p>
+          <p>
+            Borrowing pages from Disney and Universal's "stay and play" playbook, the park is weighing
+            three lodging concepts: a modest family hotel, a premium coastal resort, or a tiered hybrid.
+            Our team was hired as analytical consultants to figure out which guests would actually book,
+            what package features they want, and how much it should cost.
+          </p>
+          <p>
+            This site is a tour of what we found.
+          </p>
+        </div>
+        <div class="stat-grid">
+          <div class="stat">
+            <div class="stat-num" data-target="4">0</div>
+            <div class="stat-label">Guest Segments<br>Identified</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="72" data-suffix="%">0</div>
+            <div class="stat-label">Classifier<br>Accuracy</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="150" data-prefix="$">0</div>
+            <div class="stat-label">Per-Guest<br>Cost Cap</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num" data-target="6">0</div>
+            <div class="stat-label">Analytical<br>Workstreams</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SEGMENTATION ============ -->
+  <section id="segmentation" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Segmentation &amp; Targeting</span>
+        <h2>Who's already in the park?</h2>
+        <p class="section-sub">
+          A K-Means model on ten numeric guest variables (income, party size, distance traveled,
+          experience preferences) surfaced four distinct personas. We chose <strong>k = 4</strong>
+          on business grounds — the silhouette and elbow plots didn't disagree, and four clusters give
+          management a manageable, distinguishable set of guest types.
+        </p>
+      </div>
+
+      <div class="cluster-grid">
+        <article class="cluster-card" data-cluster="overnight">
+          <div class="cluster-icon">🏨</div>
+          <h3>Current Overnight Guests</h3>
+          <div class="cluster-stat">2.91 <span>avg nights stayed</span></div>
+          <p>
+            The only segment actually booking rooms today. Balanced taste — rides, shows, food.
+            A "jack of all trades" guest already paying to stay.
+          </p>
+          <div class="priority high">Priority: High · Retention</div>
+        </article>
+
+        <article class="cluster-card" data-cluster="mature">
+          <div class="cluster-icon">🎭</div>
+          <h3>Mature Show-Goers</h3>
+          <div class="cluster-stat">$$$ <span>highest daily spend</span></div>
+          <p>
+            Older, small parties, culture-focused. They prefer shows over rides and spend big — but
+            currently come and go in a single day.
+          </p>
+          <div class="priority medium">Priority: Medium · Premium</div>
+        </article>
+
+        <article class="cluster-card" data-cluster="family">
+          <div class="cluster-icon">🚗</div>
+          <h3>Long-Haul Family Travelers</h3>
+          <div class="cluster-stat">171 mi <span>average distance</span></div>
+          <p>
+            Largest parties, longest drives, highest household incomes — but tight per-day budgets.
+            Natural overnight candidates from a logistics standpoint.
+          </p>
+          <div class="priority medium-high">Priority: Med-High · Volume</div>
+        </article>
+
+        <article class="cluster-card" data-cluster="foodies">
+          <div class="cluster-icon">🍤</div>
+          <h3>Young Frequent Foodies</h3>
+          <div class="cluster-stat">★ <span>highest stay intent</span></div>
+          <p>
+            Youngest, most frequent visitors, food-obsessed. They <em>say</em> they'd stay overnight —
+            but rarely do. The biggest gap between intent and behavior.
+          </p>
+          <div class="priority high">Priority: High · Conversion</div>
+        </article>
+      </div>
+
+      <div class="callout">
+        <strong>Where to focus:</strong> Current Overnight Guests defend existing revenue.
+        Young Frequent Foodies are the conversion play — they already want to stay, they just need a
+        reason that fits their wallet (and their Instagram feed).
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONJOINT ============ -->
+  <section id="conjoint" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Conjoint Analysis</span>
+        <h2>Designing the package</h2>
+        <p class="section-sub">
+          We ran a ratings-based conjoint on <code>stay_options.csv</code>, joined the part-worth utilities
+          to vendor costs, and brute-forced every possible bundle. Goal: <strong>maximize utility under
+          the $150 per-guest cost cap</strong> finance handed us.
+        </p>
+      </div>
+
+      <div class="package-card">
+        <div class="package-header">
+          <span class="package-tag">Recommended Bundle</span>
+          <h3>The Lobster Land Signature Stay</h3>
+          <div class="package-cost">~$148 / guest <span class="under">just under cap</span></div>
+        </div>
+        <div class="package-features">
+          <div class="feature"><span class="ficon">🛏️</span><div><strong>Premium View Room</strong><span>water- or park-facing</span></div></div>
+          <div class="feature"><span class="ficon">📶</span><div><strong>Streaming Wi-Fi (300 Mbps)</strong><span>multi-device, high bandwidth</span></div></div>
+          <div class="feature"><span class="ficon">🧘</span><div><strong>Basic Fitness Room</strong><span>cardio + weights — fitness rated low utility</span></div></div>
+          <div class="feature"><span class="ficon">🍽️</span><div><strong>Breakfast + Dining Credits</strong><span>balanced food perk, sub-cap</span></div></div>
+          <div class="feature"><span class="ficon">⏰</span><div><strong>Early Check-In / Late Check-Out</strong><span>cheap utility lift</span></div></div>
+          <div class="feature"><span class="ficon">🚐</span><div><strong>Shuttle to Park + Town</strong><span>extends the experience beyond the gate</span></div></div>
+          <div class="feature"><span class="ficon">🎢</span><div><strong>Priority Ride Access</strong><span>highest-utility perk in its category</span></div></div>
+        </div>
+        <p class="package-note">
+          Trade-offs: we left fitness at the basic tier (utility lift wasn't worth the $40+ cost) and
+          skipped the Luxury Suite (Premium View beat it on utility per dollar). Every cent saved went
+          into perks guests actually rated highly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLASSIFICATION ============ -->
+  <section id="classification" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Classification</span>
+        <h2>Who actually buys premium?</h2>
+        <p class="section-sub">
+          We trained Logistic Regression and Random Forest on <code>stay_play_guests.csv</code> to
+          predict premium-package purchase. The Random Forest hit 94% on training data but cratered
+          to 67% on test — textbook overfitting. <strong>Logistic Regression won.</strong>
+        </p>
+      </div>
+
+      <div class="model-grid">
+        <div class="model-card winner">
+          <div class="model-badge">Selected</div>
+          <h3>Logistic Regression</h3>
+          <div class="model-metrics">
+            <div><span class="metric-num">71.8%</span><span class="metric-label">Test Accuracy</span></div>
+            <div><span class="metric-num">68.7%</span><span class="metric-label">Train Accuracy</span></div>
+            <div><span class="metric-num">+16.4 pp</span><span class="metric-label">vs. naive baseline</span></div>
+          </div>
+          <p>Generalizes cleanly — test accuracy slightly above train, no overfitting, interpretable coefficients.</p>
+        </div>
+        <div class="model-card">
+          <h3>Random Forest</h3>
+          <div class="model-metrics">
+            <div><span class="metric-num">66.7%</span><span class="metric-label">Test Accuracy</span></div>
+            <div><span class="metric-num">94.2%</span><span class="metric-label">Train Accuracy</span></div>
+            <div><span class="metric-num">−27.5 pp</span><span class="metric-label">train-test gap</span></div>
+          </div>
+          <p>Memorized the training set. Even after GridSearchCV tuning, the gap stayed too wide to trust.</p>
+        </div>
+      </div>
+
+      <div class="features-list">
+        <h4>Top predictors of premium purchase</h4>
+        <ul>
+          <li><strong>Stay intent score</strong> — buyers averaged 5.57 vs. 4.44 for non-buyers</li>
+          <li><strong>Income</strong> — buyers earned ~$89k vs. ~$77k</li>
+          <li><strong>Average daily spend</strong> — wallet behavior in-park predicts wallet behavior at the front desk</li>
+          <li><strong>Distance traveled</strong> &amp; <strong>nights already stayed</strong></li>
+          <li><strong>Segment 1 ("Ride Enthusiasts")</strong> behaved differently enough to keep as a feature</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ A/B TEST ============ -->
+  <section id="abtest" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">A/B Testing</span>
+        <h2>Which photo sells the dream?</h2>
+        <p class="section-sub">
+          Lobster Land licensed four hero images for an email campaign. We used appropriate statistical
+          tests to compare engagement and recommend a winner.
+        </p>
+      </div>
+
+      <div class="photo-grid">
+        <div class="photo-card"><div class="photo-emoji">🌃</div><h4>Night Glow</h4><p>Resort exterior, golden hour</p></div>
+        <div class="photo-card"><div class="photo-emoji">🏖️</div><h4>Boardwalk Fun</h4><p>Daytime crowd, balconies</p></div>
+        <div class="photo-card"><div class="photo-emoji">🌅</div><h4>Ocean Lodging</h4><p>Couple, ocean view from room</p></div>
+        <div class="photo-card"><div class="photo-emoji">⛱️</div><h4>Beach Side</h4><p>Lounge chairs, family beach</p></div>
+      </div>
+
+      <div class="callout">
+        Full statistical test results, p-values, and the recommendation are in the project notebook.
+        The winning image becomes the anchor of any future "Stay &amp; Play" campaign launch.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM ============ -->
+  <section id="team" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Behind the Analysis</span>
+        <h2>The team</h2>
+        <p class="section-sub">A graduate student consulting team out of Boston University's MS in Applied Business Analytics program.</p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">🦞</div>
+          <h3>Omar</h3>
+          <p>Segmentation lead</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">🦞</div>
+          <h3>Lee</h3>
+          <p>Conjoint &amp; recommendation</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">🦞</div>
+          <h3>Nutchanon</h3>
+          <p>Classification</p>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">🦞</div>
+          <h3>Naqiao</h3>
+          <p>A/B testing &amp; viz</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <span class="brand-icon">🦞</span>
+          <strong>Lobster Land · Stay &amp; Play</strong>
+        </div>
+        <p>AD654 Marketing Analytics · Boston University · Spring 2026</p>
+        <p class="footer-fine">An academic consulting project. Lobster Land is a fictional case study. All analysis based on coursework datasets.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating lobster mascot -->
+  <button id="mascot" aria-label="Lobster mascot">🦞</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
